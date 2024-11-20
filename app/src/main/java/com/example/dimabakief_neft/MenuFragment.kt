@@ -21,7 +21,11 @@ class MenuFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         view.findViewById<ImageView>(R.id.btMap).setOnClickListener{
+            val bundle = Bundle()
             findNavController().navigate(R.id.nv_map)
+        }
+        view.findViewById<ImageView>(R.id.btGuide).setOnClickListener{
+            findNavController().navigate(R.id.nvGuide)
         }
     }
 }

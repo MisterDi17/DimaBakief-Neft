@@ -39,7 +39,7 @@
             android:id="@+id/action_menuFragment_to_teacherFragment"
             app:destination="@id/teacherFragment" />
         <action
-            android:id="@+id/action_menuFragment_to_guideFragment"
+            android:id="@+id/nvGuide"
             app:destination="@id/guideFragment" />
         <action
             android:id="@+id/action_menuFragment_to_directioFragment"
@@ -56,7 +56,7 @@
     </fragment>
     <fragment
         android:id="@+id/guideFragment"
-        android:name="com.example.dimabakief_neft.GuideFragment"
+        android:name="com.example.dimabakief_neft.WorkersFragment"
         android:label="fragment_guide"
         tools:layout="@layout/fragment_guide" >
         <action

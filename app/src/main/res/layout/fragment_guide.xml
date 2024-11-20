@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GuideFragment">
+    tools:context=".WorkersFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,7 +14,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -23,20 +24,27 @@
                 android:layout_weight="1"
                 android:scaleType="fitXY"
                 android:src="@drawable/ic_exit"
-                android:layout_margin="15dp"/>
+                android:layout_marginHorizontal="15dp"/>
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Администрация"
-                android:textSize="38dp"
+                android:textSize="30dp"
                 android:gravity="center"/>
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/fon1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"/>
+
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="40dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -44,8 +52,11 @@
                 android:orientation="vertical">
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvGuide"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_guide"/>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
