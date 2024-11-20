@@ -2,11 +2,11 @@ package com.example.dimabakief_neft
 
 data class Workers(
     val id: Int, // Уникальный идентификатор преподавателя
-    val fullName: String, // ФИО преподавателя
+    val fullName: String, // ФИО
     val education: String, // Образование (высшее, среднее специальное и т.д.)
-    val specialization: String, // Специализация преподавателя по диплому
-    val position: String, // Должность преподавателя
-    val teachingSubjects: String, // Предметы, которые ведет преподаватель
+    val specialization: String, // Специализация по диплому
+    val position: String, // Должность
+    val teachingSubjects: String, // Предметы, которые ведет
     val achievements: String?, // Достижения, награды и звания (если есть)
     val professionalDevelopment: String?, // Курсы повышения квалификации (если проводились)
     val yearsOfExperience: Int, // Общий стаж работы в годах

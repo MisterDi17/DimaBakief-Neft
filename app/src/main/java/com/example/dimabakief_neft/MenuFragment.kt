@@ -20,12 +20,23 @@ class MenuFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val bundle = Bundle()
         view.findViewById<ImageView>(R.id.btMap).setOnClickListener{
-            val bundle = Bundle()
-            findNavController().navigate(R.id.nv_map)
+            findNavController().navigate(R.id.nv_map, bundle)
         }
         view.findViewById<ImageView>(R.id.btGuide).setOnClickListener{
-            findNavController().navigate(R.id.nvGuide)
+            bundle.putBoolean("Chek", true)
+            findNavController().navigate(R.id.nvGuide,bundle)
+        }
+        view.findViewById<ImageView>(R.id.btTeatcher).setOnClickListener{
+            bundle.putBoolean("Chek", false)
+            findNavController().navigate(R.id.nvGuide,bundle)
+        }
+        view.findViewById<ImageView>(R.id.btDirectio).setOnClickListener{
+            findNavController().navigate(R.id.nvDirectioFragment)
+        }
+        view.findViewById<ImageView>(R.id.btDeveloper).setOnClickListener{
+            findNavController().navigate(R.id.nvDeveleper)
         }
     }
 }

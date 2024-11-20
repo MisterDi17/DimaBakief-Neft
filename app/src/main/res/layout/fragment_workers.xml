@@ -18,7 +18,7 @@
             android:layout_marginTop="20dp">
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/imExet"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
@@ -27,7 +27,7 @@
                 android:layout_marginHorizontal="15dp"/>
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/tvTitle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Администрация"
@@ -35,10 +35,15 @@
                 android:gravity="center"/>
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/fon1"
+        <EditText
+            android:id="@+id/edPoisk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Поиск" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
             android:background="@color/gray"/>
 
         <ScrollView
