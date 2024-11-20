@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_naficator"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.dimabakief_neft.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" >
+        <action
+            android:id="@+id/action_mapsFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/developerFragment"
+        android:name="com.example.dimabakief_neft.DeveloperFragment"
+        android:label="fragment_developer"
+        tools:layout="@layout/fragment_developer" >
+        <action
+            android:id="@+id/action_developerFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.dimabakief_neft.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/nv_map"
+            app:destination="@id/mapsFragment"
+            app:enterAnim="@android:anim/linear_interpolator" />
+        <action
+            android:id="@+id/action_menuFragment_to_developerFragment"
+            app:destination="@id/developerFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_teacherFragment"
+            app:destination="@id/teacherFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_guideFragment"
+            app:destination="@id/guideFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_directioFragment"
+            app:destination="@id/directioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/teacherFragment"
+        android:name="com.example.dimabakief_neft.TeacherFragment"
+        android:label="fragment_teacher"
+        tools:layout="@layout/fragment_teacher" >
+        <action
+            android:id="@+id/action_teacherFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/guideFragment"
+        android:name="com.example.dimabakief_neft.GuideFragment"
+        android:label="fragment_guide"
+        tools:layout="@layout/fragment_guide" >
+        <action
+            android:id="@+id/action_guideFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/directioFragment"
+        android:name="com.example.dimabakief_neft.DirectioFragment"
+        android:label="fragment_directio"
+        tools:layout="@layout/fragment_directio" >
+        <action
+            android:id="@+id/action_directioFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+</navigation>
